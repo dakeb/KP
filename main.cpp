@@ -139,7 +139,7 @@ int main()
     }
     //Êä³ö
 	ofstream outfile;
-	outfile.open("out\beibao.out");
+	outfile.open("src\beibao.out");
 
     
     //Ñ¡ÔñËã·¨ 
