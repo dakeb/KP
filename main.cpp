@@ -120,12 +120,13 @@ int main()
 	
 	
 	FILE *fp;
-    char filename[30],x[31];
+    char filename[30];
     cout<<"测试文件：\n"; 
     cout<<"beibao0.in\nbeibao1.in\nbeibao2.in\nbeibao3.in\n";
     cout<<"beibao4.in\nbeibao5.in\nbeibao6.in\nbeibao7.in\nbeibao8.in\nbeibao9.in\n";
-    cout<<"请输入测试数据文件名（带后缀）:\n";
+    cout<<"请输入测试数据路径（输入样例：testData/beibao0.in）:\n";
     gets(filename);
+
     if((fp=fopen(filename,"r+"))==NULL){
         printf("ERROR!\n");
         exit(0);
@@ -137,9 +138,11 @@ int main()
 		fscanf(fp, "%d %d",&goods[i].wight,&goods[i].value);
         printf("%d %d\n", goods[i].wight,goods[i].value); 
     }
+    fp.close(); 
+    
     //输出
 	ofstream outfile;
-	outfile.open("src\beibao.out");
+	outfile.open("beibao.out");
 
     
     //选择算法 
